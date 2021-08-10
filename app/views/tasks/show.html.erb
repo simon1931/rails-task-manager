@@ -2,12 +2,13 @@
 
 <p>
   <%= @task.details %>
+  <br>
+  <input type="checkbox" <%= "checked" if @task.completed %>>
+  <br>
 </p>
-
-<input type="check-box">
 
 <%= link_to "Edit this task", edit_tasks_path(@task) %>
 <br>
 <%= link_to "Back to Tasks", tasks_path %>
 <br>
-<%= link_to "Destroy", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "🗑", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
